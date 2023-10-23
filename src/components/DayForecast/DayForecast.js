@@ -72,10 +72,10 @@ const DayForecast = () => {
                                 width={60}
                                 height={60}
                             />
-                            <div className="footer-degree">
+                            <div className="footer-degree text-[16px] sm:text-[18px] md:text-[36px] lg:text-[24px]">
                                 {Math.round(day.main.temp)}
                             </div>
-                            <div className="footer-description">
+                            <div className="hidden sm:block sm:text-[14px] md:text-[18px] capitalize">
                                 {t(
                                     `weather.${day.weather[0].description.replaceAll(
                                         ' ',
@@ -83,7 +83,7 @@ const DayForecast = () => {
                                     )}`
                                 )}
                             </div>
-                            <div className="humidity-degree">
+                            <div className="hidden sm:flex items-center sm:text-[14px] md:text-[18px]">
                                 <WiHumidity />
                                 {Math.round(day.main.humidity)} %
                             </div>

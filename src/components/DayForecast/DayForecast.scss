@@ -22,22 +22,13 @@
             margin-bottom: 10px;
             width: 60px;
         }
-        .footer-degree {
-            @apply text-[16px] sm:text-[18px] md:text-[36px] lg:text-[24px];
+        .footer-degree::after {
+            content: '°C';
+            vertical-align: super;
+            font-size: 10px;
+            font-weight: 600;
+        }
 
-            &::after {
-                content: '°C';
-                vertical-align: super;
-                font-size: 10px;
-                font-weight: 600;
-            }
-        }
-        .humidity-degree {
-            @apply hidden sm:flex items-center sm:text-[14px] md:text-[18px];
-        }
-        .footer-description {
-            @apply hidden sm:block sm:text-[14px] md:text-[18px] capitalize;
-        }
         .icon.shine-on-hover {
             transition: filter 0.5s;
             &:hover {

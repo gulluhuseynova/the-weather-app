@@ -15,7 +15,7 @@ function App() {
                     <Logo />
                     <LangSwitcher />
                 </div>
-                <div className="app-main">
+                <div className="flex grow flex-col justify-center sm:mx-20px md:mx-20% lg:mx-30% mx-20px">
                     <Date />
                     <Search />
                     <WeatherInfo />
@@ -26,4 +26,3 @@ function App() {
     )
 }
 export default App
-
