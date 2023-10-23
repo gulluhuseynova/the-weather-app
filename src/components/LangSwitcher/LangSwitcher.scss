@@ -1,0 +1,26 @@
+.language-selector {
+    position: relative;
+    width: 100px;
+    button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px;
+        width: 100%;
+        color: white;
+        border-radius: 10px;
+        background-color: #9595a76b;
+        &:hover {
+            background-color: rgba(182, 180, 180, 0.454);
+            border-radius: 10px;
+        }
+    }
+    .dropdown {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        border-radius: 10px;
+        background-color: #c4c4d46b;
+    }
+}

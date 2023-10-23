@@ -1,0 +1,48 @@
+.footer {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(107 65 93 / 47%),
+        rgb(6 24 52)
+    );
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding: 10px 0;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .week-day {
+            border-radius: 3px;
+            background-color: rgba(192, 192, 192, 0.3);
+            margin-bottom: 10px;
+            width: 60px;
+        }
+        .footer-degree {
+            @apply text-[16px] sm:text-[18px] md:text-[36px] lg:text-[24px];
+
+            &::after {
+                content: '°C';
+                vertical-align: super;
+                font-size: 10px;
+                font-weight: 600;
+            }
+        }
+        .humidity-degree {
+            @apply hidden sm:flex items-center sm:text-[14px] md:text-[18px];
+        }
+        .footer-description {
+            @apply hidden sm:block sm:text-[14px] md:text-[18px] capitalize;
+        }
+        .icon.shine-on-hover {
+            transition: filter 0.5s;
+            &:hover {
+                filter: brightness(1.5);
+            }
+        }
+    }
+}

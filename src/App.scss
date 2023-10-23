@@ -1,0 +1,12 @@
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+
+    .app-main {
+        @apply flex grow flex-col justify-center sm:mx-20px md:mx-20% lg:mx-30% mx-20px;
+    }
+}

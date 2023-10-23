@@ -1,0 +1,22 @@
+#info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    gap: 4px;
+    #weather-temp {
+        &::after {
+            content: '°C';
+            vertical-align: super;
+            font-size: 27px;
+        }
+    }
+    #extra-info {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
