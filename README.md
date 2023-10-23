@@ -5,9 +5,7 @@ Responsive Weather Application using React framework. It provides current and 4 
 
 
 ## Screenshots
-
-![App Screenshot](https://github.com/gulluhuseynova/the-weather-app/blob/main/public/screenshot.png)
-
+<img src="https://github.com/gulluhuseynova/the-weather-app/blob/main/public/screenshot.png" width="500">
 
 ## Live Demo
 
