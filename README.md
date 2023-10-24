@@ -9,7 +9,7 @@ Responsive Weather Application using React framework. It provides current and 4 
 
 ## Live Demo
 
-[Weather App Demo Link](https://weatherapp-g.vercel.app)
+[Weather App Demo Link](https://weather-app-g.vercel.app)
 
 ### Getting Started
 
