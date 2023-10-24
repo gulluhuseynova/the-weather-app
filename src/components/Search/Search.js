@@ -19,9 +19,15 @@ const Search = () => {
         if (!weatherData || weatherData.cod === '404') {
             swal(t('errors.city_not_exist'))
         } else {
-        dispatch(setInfo(weatherData))
+            dispatch(setInfo(weatherData))
         }
         inputRef.current.value = ''
+    }
+
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            getWeatherByCity()
+        }
     }
 
     useEffect(() => {
@@ -37,6 +43,7 @@ const Search = () => {
                 placeholder={t('placeholder')}
                 autoComplete="off"
                 ref={inputRef}
+                onKeyDown={handleEnter}
             />
             <button
                 className="search-button"
