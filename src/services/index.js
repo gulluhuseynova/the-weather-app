@@ -2,7 +2,7 @@ import swal from '../plugins/swal'
 
 export const getWeatherData = async (cityName) => {
     if (!cityName) {
-        swal('Please provide valid city')
+        return null
     }
     const baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
     try {

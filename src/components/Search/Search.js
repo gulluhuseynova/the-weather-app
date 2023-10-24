@@ -5,6 +5,7 @@ import { getWeatherData } from '../../services'
 import { useDispatch } from 'react-redux'
 import { setInfo } from '../../redux/weather'
 import { useTranslation } from 'react-i18next'
+import swal from '../../plugins/swal'
 
 const Search = () => {
     const { t } = useTranslation()
@@ -15,7 +16,11 @@ const Search = () => {
     const getWeatherByCity = async (cityName) => {
         const cityQueryText = inputRef.current.value || cityName
         const weatherData = await getWeatherData(cityQueryText)
+        if (!weatherData || weatherData.cod === '404') {
+            swal(t('errors.city_not_exist'))
+        } else {
         dispatch(setInfo(weatherData))
+        }
         inputRef.current.value = ''
     }
 
