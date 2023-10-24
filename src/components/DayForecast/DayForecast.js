@@ -29,7 +29,7 @@ const DayForecast = () => {
     // TODO cache for same inputs using useMemo
     useEffect(() => {
         const fetchData = async () => {
-            if (info.name) {
+            if (info?.name) {
                 const data = await fetchWeatherData(info.name)
                 if (data) {
                     setDailyData(data)
@@ -39,7 +39,7 @@ const DayForecast = () => {
             }
         }
         fetchData()
-    }, [info.name])
+    }, [info?.name])
 
     /**
      * Returns day of week depending to offset

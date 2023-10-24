@@ -10,7 +10,7 @@ const WeatherInfo = () => {
 
     return (
         <>
-            {info.name && (
+            {info?.name && (
                 <div id="info">
                     <GoLocation />
                     <div id="country-city">
